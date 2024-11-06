@@ -1,0 +1,20 @@
+---
+- name: Install Git, Apache2, and Net-tools on the webserver
+  hosts: MyVMS
+  become: yes
+  tasks:
+    - name: Install Git
+      apt:
+        name: git
+        state: present
+
+    - name: Install Apache2
+      apt:
+        name: apache2
+        state: present
+
+    - name: Install Net-tools
+      apt:
+        name: net-tools
+        state: present
+
